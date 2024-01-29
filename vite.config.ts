@@ -4,14 +4,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  build: {
-    // generate .vite/manifest.json in outDir
-    manifest: true,
-    rollupOptions: {
-      // overwrite default .html entry
-      input: "./src/index.html",
-    },
-  },
+  
   plugins: [react()],
   resolve: {
     alias: {
