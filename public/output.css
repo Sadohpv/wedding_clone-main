@@ -289,9 +289,7 @@ Correct the cursor style of increment and decrement buttons in Safari.
   outline-offset: -2px;
   /* 2 */
 }
-#heart{
-  fill:red;
-}
+
 /*
 Remove the inner padding in Chrome and Safari on macOS.
 */
