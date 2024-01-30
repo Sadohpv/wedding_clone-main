@@ -92,9 +92,15 @@ function Swap() {
       }
     }
   };
-  const handleDownload = () => {
-    console.log("Download");
+  const handleSwitchPage = (value : boolean) => {
+    setSwitchToggle(value);
+    setPicTwo("");
+    setLink2("");
+    setLinkSwapImage("");
   };
+  const handleDownload = ()=>{
+
+  }
   const handleSelectFile = () => {
     console.log("Here");
   };
@@ -194,13 +200,13 @@ function Swap() {
             <div className={cx("navibar")}>
               <div
                 className={cx("switch")}
-                onClick={() => setSwitchToggle(true)}
+                onClick={()=>handleSwitchPage(true)}
               >
                 <span>Image</span>
               </div>
               <div
                 className={cx("switch")}
-                onClick={() => setSwitchToggle(false)}
+                onClick={()=>handleSwitchPage(false)}
               >
                 <span>Video</span>
               </div>
