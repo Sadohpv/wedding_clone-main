@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "../../styles/Swap.module.scss";
+import styles from "../../styles/pageStyles/Swap.module.scss";
 import classNames from "classnames/bind";
 import {
   AvatarIcon,
@@ -26,6 +26,7 @@ import { useToast } from "../../components/ui/use-toast";
 import { signin } from "../../services/auth";
 import { SwapBox_1, SwapBox_2 } from "../../assets/svg/swapbox";
 import { swapImage, swapVideo, uploadImageSwap } from "../../services/image";
+import Header from "../../components/Header";
 
 const cx = classNames.bind(styles);
 function Swap() {
@@ -92,15 +93,13 @@ function Swap() {
       }
     }
   };
-  const handleSwitchPage = (value : boolean) => {
+  const handleSwitchPage = (value: boolean) => {
     setSwitchToggle(value);
     setPicTwo("");
     setLink2("");
     setLinkSwapImage("");
   };
-  const handleDownload = ()=>{
-
-  }
+  const handleDownload = () => {};
   const handleSelectFile = () => {
     console.log("Here");
   };
@@ -140,11 +139,11 @@ function Swap() {
       }
     }
   };
- 
+
   const handleSwapFace = async () => {
-    console.log("Click Swap")
+    console.log("Click Swap");
     if (switchToggle === true) {
-    console.log("Click Swap")
+      console.log("Click Swap");
 
       const res = await swapImage(link1, link2);
       console.log(res);
@@ -172,26 +171,7 @@ function Swap() {
         <div className={cx("image_head")}>
           <Heart />
         </div>
-        <div className={cx("header")}>
-          <div className={cx("logo")}>
-            <Roof />
-          </div>
-          <div className={cx("action")}>
-            <div
-              className={cx("item_action", "button")}
-              onClick={handleDownload}
-            >
-              <DownloadIcon width="16" height="16" />
-              Download app
-            </div>
-            <div className={cx("item_action")}>
-              <BellIcon width="32" height="32" />
-            </div>
-            <div className={cx("item_action")}>
-              <AvatarIcon width="32" height="32" />
-            </div>
-          </div>
-        </div>
+        <Header />
         <div className={cx("image_middle")}>
           <Star />
         </div>
@@ -200,13 +180,13 @@ function Swap() {
             <div className={cx("navibar")}>
               <div
                 className={cx("switch")}
-                onClick={()=>handleSwitchPage(true)}
+                onClick={() => handleSwitchPage(true)}
               >
                 <span>Image</span>
               </div>
               <div
                 className={cx("switch")}
-                onClick={()=>handleSwitchPage(false)}
+                onClick={() => handleSwitchPage(false)}
               >
                 <span>Video</span>
               </div>
@@ -241,7 +221,7 @@ function Swap() {
                 </div>
                 <div className={cx("action")} onClick={handleSwapFace}>
                   <span>Start</span>
-                </div >
+                </div>
                 <div className={cx("result")}>
                   <img src={linkSwapImage} />
                 </div>
@@ -267,7 +247,7 @@ function Swap() {
                   <div className={cx("input_video")}>
                     <div className={cx("input_preview")}>
                       {picTwo !== "" && (
-                        <video >
+                        <video>
                           <source src={picTwo} type="video/mp4" />
                         </video>
                       )}

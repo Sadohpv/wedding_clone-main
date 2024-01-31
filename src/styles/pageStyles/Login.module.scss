@@ -250,7 +250,22 @@
     justify-content: center;
   }
 }
+.image_middle {
+  position: absolute;
+  width: 1306.21px;
+  height: 469.18px;
+  top: 164.77px;
+  left: 63px;
+}
+.image_head {
+  position: absolute;
+  width: 1070.89px;
+  height: 658.05px;
+  top: 4px;
+  left: 20px;
 
+  z-index: 1;
+}
 .register {
   animation: move-down 0.75s ease-out forwards;
 }

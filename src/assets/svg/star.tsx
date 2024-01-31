@@ -58,7 +58,7 @@ export const Heart: FC<SettingIconProps> = ({}) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_195_49875)">
+      <g clipPath="url(#clip0_195_49875)">
         <circle cx="226.49" cy="2.78999" r="2.5" fill="#FFC96A" />
         <path
           d="M226.49 14.69V210.92"

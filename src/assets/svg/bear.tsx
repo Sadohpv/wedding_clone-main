@@ -17,7 +17,7 @@ export const BearIcon: FC<SettingIconProps> = ({
       xmlns="http://www.w3.org/2000/svg"
       
     >
-      <g clip-path="url(#clip0_195_50053)">
+      <g clipPath="url(#clip0_195_50053)">
         <path
           d="M128.305 59.6927L127.473 58.8908C127.658 58.6981 146.05 39.7129 167.214 34.4124L167.495 35.5342C146.654 40.7498 128.489 59.4999 128.305 59.6888V59.6927Z"
           fill="#5E8474"

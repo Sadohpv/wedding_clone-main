@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "../../styles/Login.module.scss";
+import styles from "../../styles/pageStyles/Login.module.scss";
 import classNames from "classnames/bind";
 import { ToastAction } from "../../components/ui/toast";
 import { useNavigate } from "react-router-dom";
